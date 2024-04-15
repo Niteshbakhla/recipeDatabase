@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 exports.connectDB = async () => {
 
             try {
-                        const connection = await mongoose.connect(process.env.MONGO_URL)
+                        const connection = await mongoose.connect(process.env.MONGO_URI)
 
                         if (connection.STATES.connected === 1) {
                                     console.log(`Database is connected!`);
